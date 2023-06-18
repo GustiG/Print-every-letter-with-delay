@@ -1,0 +1,16 @@
+import time
+
+def print_with_delay(text, delay):
+    for letter in text:
+        print(letter, end='', flush=True)  # Print the letter without a new line
+        time.sleep(delay)  # Pause for the specified delay
+    print()  # Print a new line after printing the complete text
+
+# Example usage
+text_to_print = "Hello, nerds!\nLook at this text go.\nPreety fly, huh?\nIt was made with <import time> and a for loop.\nHere is the entire code:\n\nimport time\n\ndef print_with_delay(text, delay):\n\tfor letter in text:\n\t\tprint(letter, end='', flush=True)\n\n\t\ttime.sleep(delay)\n\n\tprint()\n\nAfter this you just use the function with the two arguments.\n\nOk that was all, see ya around.\n"
+delay_seconds = 0.065  # Adjust this value to change the delay (in seconds)
+
+print_with_delay(text_to_print, delay_seconds)
+time.sleep(1.2)
+print_with_delay("\033[35m" + "Have a nice day!" + "\033[36m", 0.02)
+
